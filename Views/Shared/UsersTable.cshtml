@@ -1,0 +1,38 @@
+﻿@section UserMenu{
+    @Html.Partial("AdminMenu")
+}
+
+<div class="table-responsive-md text-center">
+    <table class="table table-bordered table-dark table-sm w-auto table-striped thead-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellidos</th>
+                <th scope="col">Fecha de nacimiento</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">Admin</th>
+                <th scope="col">Borrar</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.Usuarios)
+            {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@item.Apellidos</td>
+                <td>@item.FechaNacimiento.ToString("dd/MM/yyyy")</td>
+                <td>@item.Email</td>
+                <td>@item.Password</td>
+                <td>@item.Admin</td>
+                @if (!item.Admin)
+                {
+                    <td class="pointer" onclick="location.href = '/User/DeleteUser?email=@item.Email'">X</td>
+                }
+
+            </tr>
+            }
+        </tbody>
+    </table>
+    @Html.Raw(@ViewBag.Borrado)
+</div>

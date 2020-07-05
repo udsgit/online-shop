@@ -1,0 +1,50 @@
+﻿@section UserMenu{
+    @Html.Partial("AdminMenu")
+}
+
+@if (@ViewBag.HayArticulos)
+{
+
+
+    <div class="table-responsive-md text-center">
+        <table class="table table-bordered table-dark table-sm w-auto table-striped thead-dark table-hover">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Categoria</th>
+                    <th>Stock</th>
+                    <th>Precio</th>
+                    <th>Detalles</th>
+                    <th>Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in ViewBag.Articulos)
+                {
+                    <tr>
+
+
+                        <td>@item.Nombre</td>
+                        <td>@item.Categoria</td>
+                        <td>
+                            <label class="pointer" onclick="location.href = '/User/CambiarStock?id=@item.ID+&cantidad=1'">+</label>
+                            @item.Stock
+                            <label class="pointer" onclick="location.href = '/User/CambiarStock?id=@item.ID+&cantidad=-1'">-</label>
+                        </td>
+                        <td>@item.Precio€</td>
+                        <td>@item.Detalles</td>
+                        <td class="pointer" onclick="location.href = '/User/DeleteArticle?id=@item.ID'">X</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        @Html.Raw(@ViewBag.Borrado)
+    </div>
+}
+else
+{
+    <h1> Sin Artículos </h1>
+}
+
+
+

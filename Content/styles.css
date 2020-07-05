@@ -1,0 +1,61 @@
+﻿#tienda {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+a:link {
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    color: white;
+}
+
+a:active {
+    color: white;
+}
+
+#body {
+    background-image: url("../Imagenes/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.centrado {
+    display: flex; 
+    justify-content: center;
+}
+
+.textoJustificado {
+    text-align: justify;
+}
+
+.textoCentrado {
+    text-align: center;
+}
+
+.inputSize {
+  cursor: default;
+ width: 175px;
+}
+
+.sinBorde{
+    border-radius: 0px;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.ml-60{
+    margin-left: 60px;
+}
+
+.ml-110 {
+    margin-left: 110px;
+}

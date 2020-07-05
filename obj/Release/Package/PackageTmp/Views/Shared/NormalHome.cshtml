@@ -1,0 +1,15 @@
+﻿@section UserMenu{
+    @Html.Partial("NormalMenu")
+}
+
+
+    <div class="card bg-transparent text-center border-0" style="width: 18rem;">
+        <img src="@ViewBag.Articulo.Imagen" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@ViewBag.Articulo.Nombre</h5>
+            <h2>@ViewBag.Articulo.Precio€</h2>
+            <p>Soló quedan @ViewBag.Articulo.Stock unidad(es)</p>
+            <p class="card-text">@ViewBag.Articulo.Detalles</p>
+            <a class="btn btn-secondary" onclick="location.href = '/User/Comprar?id=@ViewBag.Articulo.ID+&cantidad=-1'">Comprar</a>
+        </div>
+    </div>

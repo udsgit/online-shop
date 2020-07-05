@@ -1,0 +1,18 @@
+﻿@section UserMenu{
+    @Html.Partial("GuestMenu")
+}
+
+<div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
+    <div class="card-body">
+        <h5 class="card-title text-center">Registrarse</h5>
+        <form class="form-signin" method="POST" action="/Home/UserRegister">
+            <input type="text" id="nombre" class="form-control mb-3" name="nombre" placeholder="Nombre" value="@ViewBag.Nombre" required autofocus>
+            <input type="text" id="apellidos" class="form-control mb-3" name="apellidos" placeholder="Apellidos" value="@ViewBag.Apellidos" required>
+            <input type="date" id="fechaNacimiento" class="form-control mb-3" name="fechaNacimiento" value="@ViewBag.FechaNacimiento" required autofocus>
+            <input type="email" id="email" class="form-control mb-3" name="email" placeholder="Email" value="@ViewBag.Email" required>
+            <input type="password" id="password" class="form-control mb-3" name="password" placeholder="Contraseña" value="@ViewBag.Password" required>
+            <button class="btn btn-lg btn-secondary btn-block" type="submit">Crear usuario</button>
+            @Html.Raw(ViewBag.Info)
+        </form>
+    </div>
+</div>

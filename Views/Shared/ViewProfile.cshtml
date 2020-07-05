@@ -1,0 +1,55 @@
+﻿@section UserMenu{
+    @Html.Partial("NormalMenu")
+}
+
+@foreach (var item in ViewBag.DatosPerfil)
+{
+    <div class="card text-white bg-dark mb-3">
+        <div class="card-body">
+            <h5 class="card-title text-center">Mi Perfil</h5>
+            <div class="mb-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-secondary text-light d-none d-sm-block" style="cursor: default; width: 175px"> Nombre</span>
+                    </div>
+                    <input type="text" id="nombre" class="form-control mx-auto" name="nombre" value="@item.Nombre" disabled required autofocus>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-secondary text-light d-none d-sm-block" style="cursor: default; width: 175px">Apellidos</span>
+                    </div>
+                    <input type="text" id="apellidos" class="form-control mx-auto" name="apellidos" value="@item.Apellidos" disabled required>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-secondary text-light d-none d-sm-block" style="cursor: default; width: 175px">Fecha de nacimiento</span>
+                    </div>
+                    <input type="date" id="fechaNacimiento" class="form-control mx-auto" name="fechaNacimiento" value="@item.FechaNacimiento.ToString("yyy-MM-dd")" disabled required autofocus>
+                </div>
+            </div>
+            <div class="mb-3">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-secondary text-light d-none d-sm-block" style="cursor: default; width: 175px">Email</span>
+                    </div>
+                    <input type="email" id="email" class="form-control mx-auto" name="email" value="@item.Email" disabled required>
+                </div>
+            </div>
+            <div>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-secondary text-light d-none d-sm-block" style="cursor: default; width: 175px">Contraseña</span>
+                    </div>
+                    <input type="password" id="password" class="form-control mx-auto" name="password" value="@item.Password" disabled required>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+

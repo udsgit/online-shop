@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="containe-fluid">
+        <div class="navbar navbar-expand navbar-dark bg-dark justify-content-end">
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="mx-auto">
+                    @RenderSection("UserMenu", false)
+                </div>
+            </div>
+        </div>
+        <div class="card text-white bg-dark rounded-0" id="menu">
+            <img src="~/Imagenes/fondo.jpg" class="card-img imagenFormulario" alt="fondoFormulario" id="fondo" />
+            <div class="card-img-overlay">
+                <div class="centrado" id="body">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="navbar navbar-dark bg-dark text-light">
+
+                <label class="mx-auto">&copy; @DateTime.Now.Year - Mi Tienda</label>
+
+            </div>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,70 @@
+﻿@section UserMenu{
+    @Html.Partial("GuestMenu")
+}
+
+    <div class="container textoJustificado mt-3 mb-3">
+        <h1 class="textoCentrado">Sobre mi</h1>
+        <p>
+            Hola, mi nombre es Emmanuel y este proyecto ha sido creado para la asignatura de Desarrollo web en entorno servidor
+            solo con el fin de aprender la tecnología de ASP.NET MVC5
+        </p>
+        <ul>
+            <li><strong>Email</strong>:  emmanuelglezaguirre@gmail.com </li>
+
+            <li><strong>Linkedin</strong>: <a href="https://www.linkedin.com/in/emmanuel-gonzalez-aguirre-4b328b182/">Perfil de Linkedin</a> </li>
+        </ul>
+        <br />
+        <h1 class="textoCentrado">Sobre el proyecto</h1>
+        <p>El proyecto se resume en 3 apartados, según el tipo de usuario que acceda a la web.</p>
+        <h5 class="textoCentrado">Usuario Invitado</h5>
+        <p>Es la primera persona que accede a la web sin haber iniciado sesión previamente, tiene acceso a los siguientes apartados.</p>
+        <ul>
+            <li><strong>Home</strong>: Página de bienvenida, solo indica que puede iniciar sesión o registrarse.</li>
+            <li><strong>Iniciar Sesión</strong>: Formulario de inicio de sesión para poder redirigirnos a la "Zona Usuario".</li>
+            <li><strong>Registrarse</strong>: Formulario para darse de alta en la web introduciendo los datos personales para posteriormente poder iniciar sesión.</li>
+            <li><strong>Acerca de</strong>: Información de interés acerca de mí y de está web.</li>
+        </ul>
+
+        <h5 class="textoCentrado">Usuario normal</h5>
+        <p>
+            Es quien previamente se ha registrado a través del formulario y posteriormente ha iniciado sesión correctamente, el menú es completamente
+            diferente en el cual le proporciona acceso a nuevas funcionalidades.
+            <ul>
+                <li><strong>Home</strong>: Página de bienvenida, solo indica que se encuentra en la "Zona Usuario".</li>
+                <li><strong>Tienda</strong>: Productos disponibles que el usuario puede comprar.</li>
+                <li><strong>Ver Perfil</strong>: Nos indica los datos personales que hemos proporcionado cuando nos hemos registrado.</li>
+                <li><strong>Editar Perfil</strong>: Es igual que la anterior, pero nos permite modificar el "Nombre", "Apellido" y la Contraseña.</li>
+                <li><strong>Desconectar</strong>: Nos desconecta de forma segura, y nos devuelve a la página de "Usuario invitado".</li>
+            </ul>
+
+            <h5 class="textoCentrado">Usuario Admin</h5>
+        <p>Es la persona que administra la aplicación web, solo existe 1 que es "admin@gmail.com", tiene acceso a las siguientes funcionalidades.</p>
+        <ul>
+            <li><strong>Home</strong>: Página de bienvenida que nos indica que nos encontramos en la "Zona Admin".</li>
+            <li><strong>Registrar Articulo</strong>: Formulario para poder crear nuevos artículos para la venta.</li>
+            <li><strong>Usuarios</strong>: Tabla que nos informa de todos los usuarios existentes con sus datos, nos permite borrar usuarios.</li>
+            <li>
+                <strong>Artículos</strong>: Tabla que nos informa de todos los artículos existentes, nos permite añadir o quitar stock de cada
+                articulo y también borrarlos.
+            </li>
+            <li><strong>Desconectar</strong>: Nos desconecta de forma segura y nos devuelve a la página de "Usuario invitado".</li>
+        </ul>
+        <br />
+        <h1 class="textoCentrado">Posibles Mejoras</h1>
+        <p>
+            Obviamente la aplicación web es muy mejorable, la cual no se ha podido añadir por tiempo, las mejoras que me hubiera gustado añadir son las
+            siguientes:
+        </p>
+        <ul>
+            <li><strong>Encriptamiento</strong>: Guardar de forma encriptada los datos sensibles como las contraseñas.</li>
+            <li>
+                <strong>Cuidado con las Cookies</strong>: He usado muchas cookies para almacenar información del inicio de sesión (como el email y los intentos), la cual
+                no está bien, podría haberlas almacenado de una forma más segura, pero era una forma de aprender a usarlas.
+            </li>
+            <li><strong>AJAX</strong>: Haber podido utilizar peticiones asíncronas para los apartados de menú y no tener que recargar la página completa.</li>
+            <li><strong>Más funcionalidades</strong>: Más funcionalidades referente a la tienda, carrito de compra y otros apartados...</li>
+        </ul>
+
+    </div>
+
+

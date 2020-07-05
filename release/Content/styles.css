@@ -1,0 +1,29 @@
+﻿.imagenFormulario {
+    height: 600px;
+}
+
+.centrado {
+    display: flex; 
+    justify-content: center;
+}
+
+.inputSize {
+    cursor: default;
+    width: 175px;
+}
+
+.sinBorde{
+    border-radius: 0px;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.ml-60{
+    margin-left: 60px;
+}
+
+.ml-70 {
+    margin-left: 70px;
+}

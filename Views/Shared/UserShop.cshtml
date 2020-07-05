@@ -1,0 +1,43 @@
+﻿@section UserMenu{
+    @Html.Partial("NormalMenu")
+}
+
+@if (@ViewBag.HayArticulos)
+{
+    <div id="tienda">
+        @foreach (var item in ViewBag.Articulos)
+        {
+            <div class="card bg-transparent text-center border-0" style="width: 18rem;">
+                <img src="@item.Imagen" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h2 class="card-title">@item.Nombre</h2>
+                    <h3>@item.Precio€</h3>
+
+                    <p class="card-text">@item.Detalles</p>
+                    @if (@item.Stock > 1)
+                    {
+                        <p>Soló quedan @item.Stock unidades</p>
+                        <a class="btn btn-dark" onclick="location.href = '/User/Comprar?id=@item.ID+&cantidad=-1'">Comprar</a>
+                    }
+                    else if (@item.Stock > 0 && @item.Stock < 2)
+                    {
+                        <p>Soló queda @item.Stock unidad</p>
+                        <a class="btn btn-dark" onclick="location.href = '/User/Comprar?id=@item.ID+&cantidad=-1'">Comprar</a>
+                    }
+                    else
+                    {
+                        <p>Sin stock</p>
+                    }
+
+                </div>
+            </div>
+        }
+    </div>
+
+}
+else
+{
+<h3 class="mb-3">Lo siento, actualmente no tenemos ningún articulo a la venta, intentalo más tarde</h3>
+}
+
+

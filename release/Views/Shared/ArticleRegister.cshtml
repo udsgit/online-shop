@@ -1,0 +1,26 @@
+﻿@section UserMenu{
+    @Html.Partial("AdminMenu")
+}
+
+<div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
+    <div class="card-body">
+        <h5 class="card-title text-center">Articulo</h5>
+        <form class="form-signin" method="POST" action="/User/ArticleRegister">
+            <input type="text" id="nombre" class="form-control mb-3" name="nombre" placeholder="Nombre" required autofocus>
+            <select name="categoria" class="custom-select mb-3">
+                <option selected>Categoria</option>
+                <option value="portatil">Portatil</option>
+                <option value="sobremesa">Sobremesa</option>
+                <option value="tablet">Tablet</option>
+                <option value="smartphone">Smartphone</option>
+                <option value="monitor">Monitor</option>
+                <option value="impresora">Impresora</option>
+            </select>
+            <input type="number" id="stock" class="form-control mb-3" name="stock" placeholder="# Stock" required autofocus>
+            <input type="number" id="precio" min="1.00" max="10000.00" step="1.00" class="form-control mb-3" name="precio" placeholder="€ Precio" required>
+            <textarea class="form-control mb-3" id="exampleFormControlTextarea1" name="detalles" placeholder="Descripcion" rows="3"></textarea>
+            <button class="btn btn-lg btn-secondary btn-block" type="submit">Crear Articulo</button>
+            @Html.Raw(ViewBag.Info)
+        </form>
+    </div>
+</div>

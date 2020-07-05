@@ -1,0 +1,15 @@
+﻿@section UserMenu{
+    @Html.Partial("GuestMenu")
+}
+
+<div class="card text-white bg-dark mb-3">
+    <div class="card-body">
+        <h5 class="card-title text-center">Iniciar Sesión</h5>
+        <form class="text-center" method="POST" action="/Home/Login">
+            <input type="email" id="inputEmail" class="form-control mb-3 mx-auto" name="email" placeholder="Email" value="@ViewBag.Email" required autofocus>
+            <input type="password" id="inputPassword" class="form-control mb-3 mx-auto" name="password" placeholder="Contraseña" required>
+            <input class="btn btn-lg btn-secondary btn-block mx-auto" type="submit" value="Login" />
+            @Html.Raw(@ViewBag.Info)
+        </form>
+    </div>
+</div>
