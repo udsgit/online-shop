@@ -42,9 +42,8 @@ It was a deliverable practice of creating a Web Application with **ASP.NET MVC5*
 - **Razor**&nbsp;&nbsp;_(Views)_
 - [**Bootstrap 4**](https://getbootstrap.com/docs/4.1)
 - **C#**
-
-* **ASP.NET MVC5**
-* **Entity Framework / SQL** _(BBDD)_
+- **ASP.NET MVC5**
+- **Entity Framework / SQL**&nbsp;&nbsp;_(BBDD)_
 
 ## **Setup**
 
