@@ -7,6 +7,7 @@ Online store 🛍️ of technology items 💻 📱 🖨️
 - [**Online Shop**](#online-shop)
   - [**Table of contents**](#table-of-contents)
   - [**General info**](#general-info)
+  - [**Demo**](#demo)
   - [**Screenshots**](#screenshots)
   - [**Technologies**](#technologies)
   - [**Setup**](#setup)
@@ -21,19 +22,17 @@ Online store 🛍️ of technology items 💻 📱 🖨️
 
 It was a deliverable practice of creating a Web Application with **ASP.NET MVC5**, So I have developed an online store of technology items which users register to buy products while the admin user is the one who manages the website and can modify the products and users through the administrator panel.
 
+## **Demo**
+
+Unfortunately the project does not have an interactive demo that you can try, since it is not deployed on the internet, only if you download the project following the setup steps.
+
+> <img src="images/demo.gif"/><br><i>Demo</i>
+
 ## **Screenshots**
 
-> ![Screenshot](images/shop.gif)  
-> _Gif example of web functionality_
-
-> ![Screenshot](images/guest.png)  
-> _Guest Menu when not logged in._
-
-> ![Screenshot](images/normal-user.png)  
-> _Shop Menu when a normal user is logged in._
-
-> ![Screenshot](images/admin-user.png)  
-> _Example of the main panels that the user admin has._
+> <img src="images/guest.png" height="150"/>
+> <img src="images/normal-user.png" height="150"/>
+> <img src="images/admin-user.png" height="150"/><br><i>Example of the 3 user zones</i>
 
 ## **Technologies**
 
@@ -46,8 +45,6 @@ It was a deliverable practice of creating a Web Application with **ASP.NET MVC5*
 - **Entity Framework / SQL**&nbsp;&nbsp;_(BBDD)_
 
 ## **Setup**
-
-Unfortunately the project does not have a demo, since it is not deployed online, but you can try it if you follow the following steps.
 
 1. Clone or download the repository.
 
